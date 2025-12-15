@@ -1,0 +1,49 @@
+%==================================================================
+%
+%   KAA Technical report
+%
+%==================================================================
+\documentclass[10pt,a4paper]{report}
+\usepackage{ETAIA}
+
+\hypersetup{hidelinks}
+
+%------------------------------------------------------------------
+\begin{document}
+
+%------------------------
+% Pour 1ere de couverture
+\def\titreRapport{$USECASE$}
+\def\soustitreRapport{$TITRE$}
+\def\versionComposant{$VERSION$}
+\def\headDocumentName{\titreRapport - \soustitreRapport - KAA \versionComposant}
+
+%---------TITRE----------------------------------------------------
+\input{titlePage}
+
+%----------Header--------------------------------------------------
+\newgeometry{left=2cm, bottom=3.5cm, top=1.5cm, right=2cm}
+\headheight=3cm
+\headsep=0.5cm
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{\raisebox{0.0\height}{\hspace{-2cm}\includegraphics{ETAIAbandeau.png}}} 
+    \fancyfoot[L]{\raisebox{0.0\height}{\hspace*{2cm}\titreRapport - \soustitreRapport \hspace*{7.5cm}\thepage}}
+}
+
+\fancyhf{}
+\fancyhead[L]{\raisebox{0.0\height}{\hspace{-2cm}\includegraphics{ETAIAbandeau.png}}} 
+\fancyfoot[L]{\raisebox{0.0\height}{\hspace*{2cm}\titreRapport - \soustitreRapport \hspace*{7.5cm}\thepage}}
+
+%---------TABLE DES MATIERES---------------------------------------
+{\color{vETAIA}\tableofcontents}
+
+%--------- CHAPTERS ------------------------------------------------
+$AIDE$
+
+$DATA$
+
+%------------------------------------------------------------------
+%==================================================================
+\end{document}

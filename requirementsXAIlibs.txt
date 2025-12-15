@@ -1,0 +1,16 @@
+#aix360==0.3.0
+#alibi==0.9.6
+#captum==0.7.0
+#saliency==0.2.1
+#shap==0.44.1
+#xplique==v1.4.0
+#---------------------------------------------------
+git+https://github.com/Trusted-AI/AIX360@v0.3.0
+git+https://github.com/SeldonIO/alibi@v0.9.6
+git+https://github.com/pytorch/captum@v0.7.0
+lime
+git+https://github.com/dejeanph/saliency_confianceAI
+shap==0.44.1
+git+https://github.com/deel-ai/xplique@v1.4.0
+en-core-web-md==3.7.1
+xport==3.6.1

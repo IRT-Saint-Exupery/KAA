@@ -1,0 +1,181 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ETAIA}
+
+%==================================================================
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{fancyhdr}
+\RequirePackage[table]{xcolor}
+\RequirePackage{amssymb}
+\RequirePackage{xcolor}
+\RequirePackage{bm}
+\RequirePackage{secdot}
+\RequirePackage{mathptmx}
+\RequirePackage{float}
+\RequirePackage[english]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{textcomp}
+\RequirePackage{tcolorbox}
+\RequirePackage{longtable}
+\RequirePackage{subfig}
+\RequirePackage{float}
+\RequirePackage{adjustbox}
+\RequirePackage{listings}
+\RequirePackage{caption}
+\RequirePackage[colorinlistoftodos]{todonotes}
+\RequirePackage{hyperref}
+
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\RequirePackage{layout}
+\RequirePackage{titlesec}
+\titleformat{\chapter}
+  {\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
+\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\definecolor{darkblue}{RGB}{0,99,124}
+%\definecolor{creme}{rgb}{0.93,0.87,0.81}
+%\definecolor{orange}{RGB}{255,88,0}
+%\definecolor{green}{RGB}{0,153,139}
+%\definecolor{lggreen}{RGB}{0,253,139}
+%\definecolor{red}{RGB}{153,0,139}
+%\definecolor{Red}{RGB}{250,70,50}
+%\definecolor{blue}{RGB}{0,132,174}
+%\definecolor{dkgreen}{rgb}{0,0.6,0}
+%\definecolor{gray}{rgb}{0.5,0.5,0.5}
+%\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{vETAIA}{RGB}{112,48,160}
+
+\definecolor{darkGreen}{rgb}{0.1,0.35,0.0}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{creme}{rgb}{0.93,0.87,0.81}
+\definecolor{vert}{rgb}{0.9,0.95,0.9}
+\definecolor{rouge}{rgb}{0.95,0.9,0.9}
+\definecolor{bleu}{rgb}{0.9,0.9,0.95}
+\definecolor{gris}{rgb}{0.95,0.95,0.95}
+
+
+\RequirePackage{mdframed}
+\RequirePackage{multirow} %% Pour mettre un texte sur plusieurs rangées
+\RequirePackage{multicol} %% Pour mettre un texte sur plusieurs colonnes
+\RequirePackage{scrextend} % Forcer la 4eme de couverture en page pair
+\RequirePackage{tikz}
+\RequirePackage{graphicx}
+\RequirePackage{colortbl}
+\RequirePackage{array}
+\newcolumntype{M}[1]{>{\raggedright}m{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1mm}}
+\RequirePackage{geometry}
+\renewcommand{\thechapter}{\Alph{chapter}}
+
+\RequirePackage{natbib} %% Pour la bibliographie
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\newcommand{\cb}[0]{\cellcolor{vETAIA}}
+\newcommand{\cv}[0]{\cellcolor{green}\color{white}}
+\newcommand{\cd}[0]{\cellcolor{red}\color{white}}
+\newcommand{\cm}[0]{\cellcolor{mauve}\color{white}}
+\newcommand{\crm}[0]{\cellcolor{creme}}
+\newcommand{\cg}[0]{\cellcolor{lightgray}}
+\newcommand{\ckg}[0]{\cellcolor{dkgreen}}
+\newcommand{\co}[0]{\cellcolor{orange}}
+\newcommand{\htab}[1]{\cb{\textbf{\color{white}{#1}}}}
+\newcommand{\nl}{\newline}
+\newcommand{\ima}[1]{\includegraphics{#1}}
+\newcommand{\imaw}[2]{\includegraphics[width=#1mm]{#2}}
+\newcommand{\imah}[2]{\includegraphics[height=#1mm]{#2}}
+\newcommand{\imas}[2]{\includegraphics[scale=#1]{#2}}
+\newcommand{\mnp}[3]{\begin{minipage}[t][#1em]{#2mm}#3\end{minipage}}
+\newcommand{\com}[1]{\begin{minipage}[t]{45mm}\linespread{.7}\raggedright\footnotesize\textit{#1}\normalsize\linespread{1}\end{minipage}}
+\newcommand{\puce}[1]{\includegraphics[width=2mm]{images/#1.png}}
+\newcommand{\ppuce}[1]{\hspace{2mm}\includegraphics[width=3mm]{images/#1.png}}
+\newcommand{\kaa}[0]{\hspace{2mm}\includegraphics[width=3.5mm]{images/kaa.png}}
+\newcommand{\pcheck}[0]{\hspace{2mm}\includegraphics[width=3mm]{images/check.png}}
+
+%\newcommand{\wbimf}[0]{whitebox method, incompatible with model format}
+%\newcommand{\jkaa}[0]{just integrated into Kaa, not thoroughly studied}
+%\newcommand{\notimage}[0]{not adapted to image data}
+%\newcommand{\onlyimage}[0]{only for image dataset}
+%\newcommand{\notmodel}[0]{not adapted to model format}
+%\newcommand{\notuc}[0]{not adapted to use case problem}
+%\newcommand{\oneband}[0]{need a function to reduce data to 1 band to use watershed map function}
+%\newcommand{\convert}[0]{need functions to convert tensors}
+%\newcommand{\reeval}[0]{reevaluation is needed due to new plot functions}
+%\newcommand{\grad}[0]{need functions to access gradient layers}
+
+%\newcommand{\gpuce}[1]{\begin{minipage}[b]{10mm}\hspace{4mm}\includegraphics[width=5mm]{images/#1.png}\vspace*{-5mm}\end{minipage}}
+%\newcommand{\gxpuce}[1]{\begin{minipage}[b]{18mm}\hspace{7mm}\includegraphics[width=4mm]{images/#1.png}\vspace*{-1mm}\end{minipage}}
+\renewcommand{\arraystretch}{1.2}
+
+%\newcommand{\at}{\ppuce{cyan}}
+%\newcommand{\af}{\ppuce{rouge}}
+%\newcommand{\ec}{\ppuce{orange}}
+%\newcommand{\ok}{\ppuce{vert}}
+%\newcommand{\ab}{\ppuce{noir}}
+%\newcommand{\ck}{\ppuce{check}}
+
+\RequirePackage{breakcites}
+\RequirePackage{booktabs}
+\RequirePackage{subfig}
+\RequirePackage{parskip}
+\RequirePackage{fancyvrb}
+\RequirePackage{fvextra}
+\RequirePackage[colorinlistoftodos]{todonotes}
+\RequirePackage{dirtree}
+\RequirePackage{sectsty}
+
+\makeatletter
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@arabic\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{4}{10.0em}{4.6em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+
+\newcounter{subsubsubsubsection}[subsubsubsection]
+\renewcommand\thesubsubsubsubsection{\thesubsubsubsection .\@arabic\c@subsubsubsubsection}
+\newcommand\subsubsubsubsection{\@startsection{subsubsubsubsection}{5}{\z@}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsubsection{\@dottedtocline{5}{10.0em}{5.1em}}
+\newcommand*{\subsubsubsubsectionmark}[1]{}
+\makeatother
+
+% sets colour of chapters and sections
+\partfont{\color{vETAIA}}
+\chapterfont{\color{vETAIA}}
+\sectionfont{\color{vETAIA}}
+\subsectionfont{\color{vETAIA}}
+\subsubsectionfont{\color{vETAIA}}
+
+\renewcommand{\headrulewidth}{0pt}% Default \headrulewidth is 0.4pt
+\renewcommand{\footrulewidth}{0pt}% Default \footrulewidth is 0pt
+
+\setlength{\emergencystretch}{3em}
+\setlength{\tolerance}{1pt}
+\setlength{\parindent}{0pt}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+
+%==================================================================

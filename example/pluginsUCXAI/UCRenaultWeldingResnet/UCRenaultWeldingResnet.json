@@ -1,0 +1,19 @@
+{
+    "Resnet": {
+        "classes":["OK","RETOUCHE"],
+        "dataset":"data/",
+        "datatype":"image",
+        "modelpath":"model/",
+        "modelfile":"rn50_welding.pth",
+        "datapreprocessmodelpath":"model/",
+        "datapreprocessmodelpathfile":"yolov11n_welder.pt",
+        "modeltype":"classification",
+        "data": [
+            "200617-0852_3207236_ - C20_OK",
+            "190923-1320_2927975_ - C20_RETOUCHE",
+            "190926-2052_2933486_ - C20_RETOUCHE",
+            "190923-1614_2934349_ - C20_OK"
+            ]
+        },
+    "dataExtension": "jpg"
+}
