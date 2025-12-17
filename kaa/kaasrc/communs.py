@@ -15,7 +15,7 @@ try:
     import cv2
 except Exception as err:
     print("Error:", err)
-    colPrint("Package cv2 is uninstalled.", "Error")
+    print("Package cv2 is uninstalled.", "Error")
 # ---------
 try:
     import torch
@@ -26,7 +26,7 @@ except Exception as err:
 try:
     from skimage.segmentation import watershed
 except Exception as err:
-    colPrint("Package skimage is uninstalled.", "Error")
+    print("Package skimage is uninstalled.", "Error")
 # ---------
 
 # check if we can compile latex reports
