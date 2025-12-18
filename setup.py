@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="kaa-xai",
-    version="25.12",
+    version="25.12.0",
     url="https://github.com/IRT-Saint-Exupery/KAA",
     author="Philippe Dejean",
     author_email="philippe.dejean@irt-saintexupery.com",
