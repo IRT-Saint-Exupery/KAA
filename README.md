@@ -36,8 +36,23 @@ pip install KAA-XAI
 ```
 
 2. via downlading the v25.12 tag on our github:
+
+Option 1: Using Git
+```bash
+git clone https://github.com/IRT-Saint-Exupery/KAA.git
+cd KAA
+git checkout tags/v25.12
 ```
-https://github.com/IRT-Saint-Exupery/KAA@v25.12
+Option 2: Download the ZIP archive
+```bash
+wget https://github.com/IRT-Saint-Exupery/KAA/archive/refs/tags/v25.12.zip
+unzip v25.12.zip
+cd KAA-25.12
+```
+
+Install the requirements:
+
+```
 pip install -r requirements.txt
 ```
 Then install the XAI libraries you want:
@@ -50,13 +65,13 @@ pip install -r requirementsXAIlibs.txt
 Now that **KAA** is installed, you can launch the *TUI* **KAA** .
 
 ```python
-python3 kaa.py -u example/pluginsUCXAI/ -b example/UseCase/ -r ~/KAA_example
+python3 kaa/kaa.py -u example/pluginsUCXAI/ -b example/UseCase/ -r ~/KAA_example
 ```
 
 or execute a command file of the example:
 
 ```python
-python3 kaa.py -u example/pluginsUCXAI/ -b example/UseCase/ -r ~/KAA_example -c example/example.cmd
+python3 kaa/kaa.py -u example/pluginsUCXAI/ -b example/UseCase/ -r ~/KAA_example -c example/example.cmd
 ```
 The results are available in the *-r* path:
 ```

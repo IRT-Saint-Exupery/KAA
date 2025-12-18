@@ -12,5 +12,5 @@ lime
 git+https://github.com/dejeanph/saliency_confianceAI
 shap==0.44.1
 git+https://github.com/deel-ai/xplique@v1.4.0
-en-core-web-md==3.7.1
+#en-core-web-md==3.7.1
 xport==3.6.1
